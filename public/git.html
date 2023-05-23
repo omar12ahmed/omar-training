@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GIT - Omar Training Doc</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="sidebar">
+            <div class="sidebar-brand">
+                <img src="images/oi-light.png" alt="OI - Omar Ibrahim">
+            </div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Git</a>
+            </nav>
+        </div>
+        <header class="header">
+            <h1>GIT - The Basics</h1>
+        </header>
+        <main class="main-content">
+            <h2>Git Commands: A Basic Guide</h2>
+
+            <p>
+            This guide aims to provide a basic understanding of some of the most common Git commands that you might use when working locally and remotely.
+            </p>
+    
+            <h3>Local Repository Git Commands:</h3>
+    
+            <ul>
+                <li><code>git init</code>: This command is used to initialize a new Git repository in the current directory.</li>
+                <li><code>git status</code>: This command shows the status of the repository, including any changes that have been made but not yet committed.</li>
+                <li><code>git add &lt;file&gt;</code>: This command adds a file to the staging area in preparation for a commit.</li>
+                <li><code>git commit -m "Your message here"</code>: This command creates a new commit with the changes you've added to the staging area.</li>
+                <li><code>git log</code>: This command displays a list of all the commits in the repository's history.</li>
+            </ul>
+    
+            <h3>Remote Repository Git Commands:</h3>
+    
+            <ul>
+                <li><code>git clone &lt;repository&gt;</code>: This command is used to clone (or copy) a remote repository onto your local machine.</li>
+                <li><code>git push origin &lt;branch&gt;</code>: This command pushes your changes to the specified branch on the remote repository.</li>
+                <li><code>git pull origin &lt;branch&gt;</code>: This command pulls changes from the specified branch of the remote repository and merges them into your current branch.</li>
+                <li><code>git remote -v</code>: This command lists all remote repositories that are connected to the current repository.</li>
+            </ul>
+    
+            <h3>Branching Git Commands:</h3>
+    
+            <ul>
+                <li><code>git branch</code>: This command lists all branches in your repository.</li>
+                <li><code>git branch &lt;branch&gt;</code>: This command creates a new branch.</li>
+                <li><code>git checkout &lt;branch&gt;</code>: This command switches to another branch.</li>
+                <li><code>git merge &lt;branch&gt;</code>: This command merges the specified branch into the current branch.</li>
+            </ul>
+    
+            <p>
+            Remember, Git has a vast number of commands beyond these basics. As you gain more experience and become more comfortable with Git, you'll likely find that you're using a wider variety of commands.
+            </p>
+        </main>
+        <footer class="footer">
+            <span>&copy; 2023</span>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
