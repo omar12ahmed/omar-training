@@ -1,14 +1,48 @@
 /* GENERAL STYLES */
 
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,500&family=Caveat:wght@600&family=Cormorant+Garamond:ital,wght@1,300&family=Roboto:wght@100&display=swap");
+
 :root {
     font-size: 16px;
 }
 
+body {
+    
+    font-family: "Roboto";
+    font-size: 25px;
+  }
 body, html {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+
+h2 {
+    color:blue;
+    padding:0px;
+    font-size: 20px;
+    text-decoration: underline;
+    margin: 0;
+    font-weight: bold;
+}
+h1 {
+    margin: 0px;
+    background-color: #c7254e;
+
+}
+.crazy-margin p{
+    margin: 100px 0px;
+}
+.crazy-margin p:first-child{
+    margin:0px;
+}
+.container{
+    width: 500px;
+    height: 280px;
+}
+img {
+    width: 100%;
 }
 
 code {
@@ -46,12 +80,13 @@ code {
     grid-area: header;
     background-color: #f2f2f2;
     padding: 1rem;
+    
     /* add more styling as per your need */
 }
 
 .main-content {
     grid-area: main-content;
-    background-color: #fff;
+    background-color: #c8aeae;
     overflow: auto;
     padding: 2rem;
     /* add more styling as per your need */
@@ -74,4 +109,9 @@ code {
 
 .complete {
     text-decoration: line-through;
+}
+
+.youtube-container {
+    width: 500px;
+    height: 500px;
 }
