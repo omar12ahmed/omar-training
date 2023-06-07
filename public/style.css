@@ -124,7 +124,9 @@ code {
   width: calc(100% - 2rem);
   padding: 2rem 1rem;
 }
-
+#logo{
+  
+}
 .complete {
   text-decoration: line-through;
 }
@@ -136,4 +138,16 @@ code {
 .youtube-container {
   width: 500px;
   height: 500px;
+}
+
+
+.nav-bars{
+  display:flex;
+  justify-content: space-between;
+}
+@media (min-width 700px)
+{.nav-bars {
+  display: block;
+}
+
 }
