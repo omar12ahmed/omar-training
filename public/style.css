@@ -30,6 +30,30 @@ h1 {
   margin: 0px;
   background-color: #c7254e;
 }
+
+nav a {
+  list-style-type:none;
+  cursor:pointer;
+  color:rgb(226, 16, 16);
+  font-size: 30px;
+  font-weight:bolder;
+  
+}
+.nav-bar{
+  list-style-type:none;
+}
+nav a:hover {
+  background-color: rgb(36,85,191);
+  color:#f8f6f6;
+}
+nav a:active{
+  opacity: 0.4;
+}
+
+
+
+
+
 .crazy-margin p {
   margin: 100px 0px;
 }
@@ -70,16 +94,18 @@ code {
   grid-area: sidebar;
   color: #0d0d0d;
   overflow: auto;
-  background-color: #f2f2f2;
-  border-right: 1px solid #0d0d0d;
+  background-color: #5c5858;
+  border-right: 10px solid #0d0d0d;
 }
 
-.header {
+h1 {
   grid-area: header;
-  background-color: #32a232;
   padding: 1rem;
+  background-color:red;
 }
-
+.strike li {
+  text-decoration:line-through;
+}
 .main-content {
   grid-area: main-content;
   background-color: #c8aeae;
@@ -104,6 +130,7 @@ code {
   margin: 0.5rem;
 }
 
+
 .image-container img {
   width: 100%;
   height: 100%;
@@ -124,9 +151,6 @@ code {
   width: calc(100% - 2rem);
   padding: 2rem 1rem;
 }
-#logo{
-  
-}
 .complete {
   text-decoration: line-through;
 }
@@ -141,13 +165,3 @@ code {
 }
 
 
-.nav-bars{
-  display:flex;
-  justify-content: space-between;
-}
-@media (min-width 700px)
-{.nav-bars {
-  display: block;
-}
-
-}
