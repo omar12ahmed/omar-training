@@ -1,0 +1,28 @@
+{
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules": {
+        "node/no-unsupported-features/es-syntax": [
+            "error",
+            { "ignores": ["modules"] }
+        ],
+        "complexity": "off",
+        "comma-dangle": ["error", "never"],
+        "node/no-extraneous-require": "warning",
+        "import/no-extraneous-dependencies": "warning",
+        "node/no-extraneous-import": "warning",
+        "node/no-unpublished-import": "warning",
+        "node/no-unpublished-require": "warning",
+        "node/file-extension-in-import": "off",
+        "array-callback-return": "off",
+        "consistent-return": "off",
+        "no-useless-escape": "off",
+        "node/no-missing-import": [
+            "warning",
+            {
+                "tryExtensions": [".js", ".jsx", ".ts", ".scss"]
+            }
+        ]
+    }
+}
