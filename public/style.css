@@ -111,6 +111,36 @@ h1 {
   background-color: #c8aeae;
   overflow: auto;
   padding: 2rem;
+ 
+ 
+}
+form {
+   display:flex;
+   flex-direction:column;
+   margin:auto;
+  max-width:500px;
+}
+.input-box{
+  background:unset;
+  border:unset;
+  border-bottom: 2px solid;
+}
+
+button{
+  color: rgb(253, 253, 255);
+ background: radial-gradient(circle at center, rgba( 255, 125 , 125, 0 ) 0%, #af8da6 30%, #bc9292 100%);
+border:none;
+border-radius: 15px;
+height: 70px;
+width:160px;
+font-size: 25px;
+font-weight:bold;
+cursor:pointer;
+  
+}
+button:hover{
+  background-color:rgb(226, 16, 16);
+
 }
 
 .image-grid {
@@ -143,6 +173,7 @@ h1 {
   background-color: #f5f5f5;
   padding: 1rem;
   text-align: right;
+  
 }
 
 /* CUSTOM STYLES */

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>contact page</title>
-   
   </head>
   <body>
     <div class="grid-container">
@@ -32,27 +31,50 @@
       </header>
       <main class="main-content">
         <form action="action_page.php">
+          <label for="name">Full Name</label>
+          <input
+            class="input-box"
+            type="text"
+            id="fname"
+            name="full name"
+            placeholder="Your full name"
+          />
 
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      
+          <label for="email">Email address</label>
+          <input
+            class="input-box"
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Your Email Adress"
+          />
+
+          <label for="phone">Enter Your Phone number</label>
+          <input
+            class="input-box"
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]"
+          />
+
           <label for="country">Country</label>
           <select id="country" name="country">
             <option value="australia">Australia</option>
             <option value="canada">Canada</option>
             <option value="usa">USA</option>
           </select>
-      
+
           <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      
-          <input type="submit" value="Submit">
-      
+          <textarea
+            class="input-box"
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            style="height: 200px"
+          ></textarea>
+          <button>Submit</button>
         </form>
-      </div>
       </main>
       <footer class="footer">
         <span>&copy; 2023</span>
