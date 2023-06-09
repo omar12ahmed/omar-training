@@ -78,17 +78,21 @@ code {
     display: grid;
     height: 100%;
     grid-template-columns: 200px 1fr;
-    grid-template-rows: 5rem 1fr 4rem;
+    grid-template-rows: auto 1fr 4rem;
     grid-template-areas:
         "sidebar header"
         "sidebar main-content"
         "sidebar footer";
 }
 
+.header {
+    grid-area: header;
+}
+
 .sidebar {
     grid-area: sidebar;
-    color: #0d0d0d;
     overflow: auto;
+    color: #0d0d0d;
     background-color: #5c5858;
     border-right: 10px solid #0d0d0d;
 }
@@ -98,21 +102,21 @@ h1 {
     padding: 1rem;
     background-color: red;
 }
-.strike li {
-    text-decoration: line-through;
-}
+
 .main-content {
     grid-area: main-content;
     background-color: #c8aeae;
     overflow: auto;
     padding: 2rem;
 }
+
 form {
     display: flex;
     flex-direction: column;
     margin: auto;
     max-width: 500px;
 }
+
 .input-box {
     background: unset;
     border: unset;
@@ -135,6 +139,7 @@ button {
     font-weight: bold;
     cursor: pointer;
 }
+
 button:hover {
     background-color: rgb(226, 16, 16);
 }
@@ -195,6 +200,7 @@ button:hover {
     margin: 1rem 0;
     border-left: 8px solid #dddddd;
     box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.21);
+    font-size: 16px;
 }
 
 .task-card.complete {
@@ -204,6 +210,17 @@ button:hover {
 .task-card.confirmed {
     border-color: #62fc5f;
     opacity: 0.5;
+}
+
+.task-card.new {
+    border-color: #e4cc17;
+}
+
+.task-card .important {
+    font-style: italic;
+    color: #333;
+    padding: 1rem;
+    background: rgb(228, 186, 174);
 }
 
 .strikethrough {
