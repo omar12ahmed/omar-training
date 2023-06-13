@@ -45,8 +45,9 @@ nav a:hover {
     background-color: rgb(36, 85, 191);
     color: #f8f6f6;
 }
-nav a:active {
-    opacity: 0.4;
+nav ul li a.active{
+    background-color: #62fc5f;
+    color: #f6f2f6;
 }
 
 .crazy-margin p {
@@ -93,6 +94,7 @@ code {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     padding-top: 10px;
     Gap:10px;
+    grid-auto-flow: dense;
 
 }
 
