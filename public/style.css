@@ -80,9 +80,49 @@ code {
     grid-template-columns: 200px 1fr;
     grid-template-rows: auto 1fr 4rem;
     grid-template-areas:
-        "sidebar header"
+        "header header"
         "sidebar main-content"
         "sidebar footer";
+        /* to make the header the full width of the page i've changed the grid-template-areas in the .grid-container from "sidebar header' to " header header" and made sure the grid-area matched the correct grid-template area.*/
+
+}
+
+.content-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding-top: 10px;
+    Gap:10px;
+
+}
+
+.item {
+    border:black solid;
+    padding: 10px;
+    color:red;
+    background-color: #e4cc17;
+}
+.wide {
+    grid-column: span 2;
+}
+.tall{
+    grid-row:span 2;
+}
+.big{
+    grid-column: span 2;
+    grid-row:span 2;
+}
+.hero{
+    grid-column: span 3;
+    grid-row:span 2;
+
+
+
+}
+.main-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 4rem;
 }
 
 .header {
