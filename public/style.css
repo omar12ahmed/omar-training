@@ -15,7 +15,6 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 h2 {
@@ -90,8 +89,8 @@ code {
 
 .content-container{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: repeat(5, 50px);
     padding-top: 10px;
     Gap:10px;
     grid-auto-flow: dense;
@@ -312,4 +311,35 @@ button:hover {
 #lightbox .close:hover {
     background: #333;
     color: #fff;
+}
+
+@media (max-width:700px) {
+    .grid-container{
+        grid-template-columns:1fr;
+        grid-template-rows: auto;
+
+        grid-template-areas:
+        "header"
+        "sidebar"
+        "main-content"
+        "footer";
+
+    
+}
+.nav-bar{
+    display:flex;
+    overflow: scroll;
+
+}
+.nav-bar-item:not(:last-child){
+    margin-right:15px;
+    
+}
+.sidebar{
+    overflow: visible;
+}
+.main-content{
+overflow: visible;
+}
+
 }
