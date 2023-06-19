@@ -1,14 +1,15 @@
 /* GENERAL STYLES */
 
-@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,500&family=Caveat:wght@600&family=Cormorant+Garamond:ital,wght@1,300&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 :root {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 body {
     font-family: "Roboto";
     font-size: 25px;
+    font-weight: 100;
 }
 body,
 html {
@@ -17,13 +18,21 @@ html {
     padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 100;
+}
+
 h2 {
     color: blue;
     padding: 0px;
     font-size: 20px;
     text-decoration: underline;
     margin: 0;
-    font-weight: bold;
 }
 h1 {
     margin: 0px;
@@ -35,7 +44,6 @@ nav a {
     cursor: pointer;
     color: rgb(226, 16, 16);
     font-size: 30px;
-    font-weight: bolder;
 }
 .nav-bar {
     list-style-type: none;
@@ -44,7 +52,7 @@ nav a:hover {
     background-color: rgb(36, 85, 191);
     color: #f8f6f6;
 }
-nav ul li a.active{
+nav ul li a.active {
     background-color: #62fc5f;
     color: #f6f2f6;
 }
@@ -83,45 +91,40 @@ code {
         "header header"
         "sidebar main-content"
         "sidebar footer";
-        /* to make the header the full width of the page i've changed the grid-template-areas in the .grid-container from "sidebar header' to " header header" and made sure the grid-area matched the correct grid-template area.*/
-
+    /* to make the header the full width of the page i've changed the grid-template-areas in the .grid-container from "sidebar header' to " header header" and made sure the grid-area matched the correct grid-template area.*/
 }
 
-.content-container{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(5, 50px);
     padding-top: 10px;
-    Gap:10px;
+    gap: 10px;
     grid-auto-flow: dense;
-
 }
 
 .item {
-    border:black solid;
+    border: black solid;
     padding: 10px;
-    color:red;
+    color: red;
     background-color: #e4cc17;
 }
 .wide {
     grid-column: span 2;
 }
-.tall{
-    grid-row:span 2;
+.tall {
+    grid-row: span 2;
 }
-.big{
+.big {
     grid-column: span 2;
-    grid-row:span 2;
+    grid-row: span 2;
 }
-.hero{
+.hero {
     grid-column: span 3;
-    grid-row:span 2;
-
-
-
+    grid-row: span 2;
 }
-.main-grid{
-    display:grid;
+.main-grid {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto 1fr 4rem;
 }
@@ -177,7 +180,6 @@ button {
     height: 70px;
     width: 160px;
     font-size: 25px;
-    font-weight: bold;
     cursor: pointer;
 }
 
@@ -242,6 +244,20 @@ button:hover {
     border-left: 8px solid #dddddd;
     box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.21);
     font-size: 16px;
+}
+
+.task-card h3 {
+    font-weight: bold;
+}
+
+.task-card h4 {
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+    font-weight: bold;
+}
+
+.task-card p {
+    margin-top: 0.25rem;
 }
 
 .task-card.complete {
@@ -313,33 +329,28 @@ button:hover {
     color: #fff;
 }
 
-@media (max-width:700px) {
-    .grid-container{
-        grid-template-columns:1fr;
+@media (max-width: 700px) {
+    .grid-container {
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
 
         grid-template-areas:
-        "header"
-        "sidebar"
-        "main-content"
-        "footer";
-
-    
-}
-.nav-bar{
-    display:flex;
-    overflow: scroll;
-
-}
-.nav-bar-item:not(:last-child){
-    margin-right:15px;
-    
-}
-.sidebar{
-    overflow: visible;
-}
-.main-content{
-overflow: visible;
-}
-
+            "header"
+            "sidebar"
+            "main-content"
+            "footer";
+    }
+    .nav-bar {
+        display: flex;
+        overflow: scroll;
+    }
+    .nav-bar-item:not(:last-child) {
+        margin-right: 15px;
+    }
+    .sidebar {
+        overflow: visible;
+    }
+    .main-content {
+        overflow: visible;
+    }
 }

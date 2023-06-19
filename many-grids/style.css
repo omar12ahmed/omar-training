@@ -1,0 +1,72 @@
+.back {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    background: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid blue;
+}
+
+/* Apply some basic styling to the page */
+.landing-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.landing-page h1 {
+    margin-top: 0;
+}
+
+.landing-page .container {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+}
+
+.landing-page .card {
+    border: thin solid #ccc;
+    max-width: 600px;
+}
+
+.landing-page h2 {
+    margin-bottom: 10px;
+}
+
+.landing-page a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.landing-page .image-container {
+    margin-top: 20px;
+}
+
+.landing-page .image-container img {
+    max-height: 400px;
+    max-width: 600px;
+}
+
+/* Style the main container */
+.landing-page div {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Style the challenge sections */
+.landing-page div > div {
+    margin-top: 20px;
+}
+
+.challenge-page {
+    background: rgb(255, 232, 232);
+}
+
+.challenge-page > div {
+    background: white;
+    border: 0.125rem solid red;
+    border-radius: 0.5rem;
+}
