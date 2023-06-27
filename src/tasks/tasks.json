@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "title": "It works!",
+        "description": "Print \"Hello World!\" to the console",
+        "completed": false,
+        "dateCreated": "2023-06-27",
+        "dateCompleted": null
+    },
+    {
+        "id": 2,
+        "title": "ITTT",
+        "description": "If this then that... This is a task to start looking at conditional statements. If you don't know what that is, look it up!",
+        "completed": false,
+        "dateCreated": "2023-06-27",
+        "dateCompleted": null
+    }
+]

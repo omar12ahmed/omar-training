@@ -1,0 +1,25 @@
+{
+    "name": "omar-training",
+    "version": "1.0.0",
+    "description": "This guide aims to provide a basic understanding of some of the most common Git commands that you might use when working locally and remotely. Here's an overview of what each command does:",
+    "main": "index.mjs",
+    "scripts": {
+        "start": "npx nodemon ./src/*.mjs --ignore '*.json'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aerstudios/omar-training.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/aerstudios/omar-training/issues"
+    },
+    "homepage": "https://github.com/aerstudios/omar-training#readme",
+    "dependencies": {
+        "luxon": "^3.3.0"
+    },
+    "devDependencies": {
+        "chalk": "^5.2.0"
+    }
+}
