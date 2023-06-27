@@ -24,8 +24,6 @@ body {
 div.header {
     display: grid;
     grid-area: header;
-    position: sticky;
-    top: 0;
     background-color: rgb(232, 247, 247);
     grid-template-columns: 100px auto;
     grid-template-rows: 1fr;
@@ -44,7 +42,7 @@ button {
     );
     border: transparent;
 }
-div.logo {
+.logo {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -63,18 +61,17 @@ div.logo {
 }
 
 .main {
-    position: static;
+    grid-area: main;
     display: grid;
     justify-content: left;
+    overflow-y: auto;
 }
 .container {
     margin-left: 100px;
 }
 
 .footer {
-    position: sticky;
-    bottom: 0;
-    height: 50px;
+    grid-area: footer;
 }
 
 div ul {
@@ -95,10 +92,4 @@ li {
 }
 .item {
     color: grey;
-}
-
-.footer {
-    position: sticky;
-    bottom: 0;
-    height: 50px;
 }
