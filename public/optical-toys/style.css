@@ -1,1 +1,145 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+* {
+    font-family: "VT323";
+}
+html,
+body {
+    height: 100vh;
+    background-color: rgb(234, 198, 69);
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    gap: 0 0;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    height: 100%;
+}
+
+.header {
+    grid-area: header;
+    margin-left: 100px;
+}
+.main {
+    position: relative;
+    grid-area: main;
+    display: flex;
+    gap: 7em;
+    margin-left: 240px;
+    overflow: auto;
+}
+
+.footer {
+    grid-area: footer;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+/* 
+img {
+    height: 60vh;
+    max-width: 80vw;
+    border-style: solid;
+    border-color: grey;
+} */
+
+a {
+    color: black;
+}
+h2:only-child {
+    text-decoration: none;
+}
+
+span:not(.icons) {
+    position: absolute;
+    top: 20px;
+    font-size: 2rem;
+    padding: 10px;
+    border: 5px solid rgb(48, 62, 78);
+    color: rgb(48, 62, 78);
+    margin-left: 20px;
+    background-color: rgb(234, 198, 69);
+}
+span.icon {
+    position: static;
+}
+
+/* ilussions*/
+
+.illusion {
+    display: grid;
+    /* grid-template-rows: 500px 1fr 100px;
+    grid-template-columns: 1fr; */
+    gap: 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "image"
+        "content"
+        "footer";
+    height: 100%;
+}
+.menu {
+    position: absolute;
+    grid-area: image;
+    height: 70px;
+    width: 120px;
+    top: 25px;
+    left: 25px;
+    font-size: 80%;
+    border: 5px solid black;
+    background-color: white;
+}
+
+.image-container {
+    grid-area: image;
+    background-color: rgb(58, 57, 57);
+    padding: 10px 50px 10px 10px;
+    overflow: hidden;
+    height: 100vh;
+}
+.image-one {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* .p-one {
+    position: relative;
+    font-weight: 400;
+    left: 150px;
+    /*white-space: break-spaces;*
+    font-size: 30px;
+    padding-right: 400px;
+}
+.p-two {
+    position: relative;
+    font-weight: 400;
+    left: 150px;
+    /*white-space: break-spaces;*
+    font-size: 30px;
+    padding-right: 400px;}*/
+
+.about {
+    position: relative;
+    font-weight: 400;
+    left: 150px;
+    /*white-space: break-spaces;*/
+    font-size: 25px;
+    padding-right: 400px;
+}
+.about p:first-child {
+    padding-bottom: 150px;
+}
+
+.about {
+    grid-area: content;
+}
+.footer {
+    grid-area: footer;
+}

@@ -1,4 +1,4 @@
-html,
+jhtml,
 body {
     height: 100%;
 }
@@ -196,35 +196,31 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    
     .container {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
-    
+
     div.sidebar {
-    display: none;
+        display: none;
     }
 
-.youtube{
-    display:none;
-}
-
+    .youtube {
+        display: none;
+    }
 
     div.brand {
-        display:grid;
-        width:fit-content;
+        display: grid;
+        width: fit-content;
         grid-template-areas: "brand search profile";
-
     }
 
-    div.profile{
-        display:none;
+    div.profile {
+        display: none;
     }
 
     .header {
         grid-template-columns: 1fr 1;
-        background:white;
-      
+        background: white;
     }
 
     .video-content > .video h3 {
@@ -234,5 +230,4 @@ body {
     .video-content > .video p {
         font-size: 30px;
     }
-    
 }
