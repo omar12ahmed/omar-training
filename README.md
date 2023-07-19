@@ -5,7 +5,12 @@ series of tasks to help our intern learn fundamental JavaScript within the Node
 environment. The tasks will involve working with various node modules to build
 practical applications and gain hands-on experience.
 
+To start the tasks, look at the Prequisites section below to ensure that you have everything you need
+and then open your console and type `npm start`
+
 ## Prerequisites
+
+Install the **Better Comments** extension for VSCode to make the comments easier to read.
 
 Before you can start with the tasks, please ensure that you have the following
 requirements fulfilled.
