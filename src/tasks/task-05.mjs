@@ -20,10 +20,20 @@ export const run = async () => {
     // itself as completed
 
     //! DO YOUR WORK HERE
-    const car = undefined;
+    const car = {
+        make: "Nissan",
+        model: "Juke",
+        Year: 2018,
+        colour: "blue",
+        accelerator: function () {
+            return "vroom";
+        }
+    };
+
+    console.log(car.make);
 
     // TESTS:
-    const runTests = false;
+    const runTests = true;
     if (runTests) {
         assert.strictEqual(checkCar(car), "Vroom!");
         assert.strictEqual(Object.keys(car).includes("make"), true);

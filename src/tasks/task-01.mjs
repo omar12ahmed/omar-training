@@ -6,8 +6,10 @@ export const run = () => {
 
     //! DO YOUR WORK HERE
 
+    console.log("hello world!");
+
     // When you see "Hello World!" in the console, mark this task as complete by setting taskCompleted to true.
-    const taskCompleted = false;
+    const taskCompleted = true;
     if (taskCompleted) {
         completeTask(1);
     }

@@ -14,7 +14,7 @@ export const run = async () => {
     // itself as completed
 
     // TESTS:
-    const runTests = false;
+    const runTests = true;
     if (runTests) {
         assert.strictEqual(amIWorking("Monday"), "at work");
         assert.strictEqual(amIWorking("Tuesday"), "at work");
@@ -27,5 +27,16 @@ export const run = async () => {
         completeTask(4);
     }
 };
+function amIWorking(day) {
+    const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    const weekends = ["Saturday", "Sunday"];
+
+    if (weekdays.includes(day)) {
+        return "at work";
+    } else if (weekends.includes(day)) {
+        return "at home";
+    }
+}
+console.log("Sunday");
 
 //! DO YOUR WOKR HERE

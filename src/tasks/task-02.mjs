@@ -13,6 +13,8 @@ export const run = async () => {
     // runTests to true. If all the tests pass, the task will mark
     // itself as completed
 
+    console.log(isOdd(42));
+
     // TESTS:
     const runTests = false;
     if (runTests) {
@@ -27,4 +29,9 @@ export const run = async () => {
 
 function isOdd(number) {
     //! WRITE YOUR FUNCTION HERE!
+    if (number % 2 === 1) {
+        return true;
+    } else {
+        return false;
+    }
 }

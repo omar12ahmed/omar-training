@@ -16,13 +16,20 @@ export const run = async () => {
     // TESTS:
     const runTests = false;
     if (runTests) {
-        assert.strictEqual(sumArray([1, 1]), 2);
+        assert.strictEqual(sumArray([1, 1, 2]), 2);
         assert.strictEqual(sumArray([1, 5, 10]), 16);
 
         completeTask(3);
     }
 };
 
-function sumArray(numberArray) {
+function sumArray() {
     //! WRITE YOUR FUNCTION HERE!
+    let total = 0;
+    for (let i = 1; i <= ""; i++) {
+        total += i + i;
+    }
+
+    return total;
 }
+console.log(sumArray());
