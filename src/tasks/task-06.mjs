@@ -17,16 +17,16 @@ export const run = async () => {
     const salary = 200;
 
     //! DO YOUR WORK HERE
-    const a = ; // 1c
-    const b = ; // 1d
-    const c = ; // 1e
+    // const a = ; // 1c
+    // const b = ; // 1d
+    // const c = ; // 1e
 
-    balance = ;
+    // balance = ;
 
-    console.log("a (10 + 5):", a);
-    console.log("b (20 - 5):", b);
-    console.log("c (2 + 2 - 5):", c);
-    console.log("balance:", balance);
+    // console.log("a (10 + 5):", a);
+    // console.log("b (20 - 5):", b);
+    // console.log("c (2 + 2 - 5):", c);
+    // console.log("balance:", balance);
 
     // TESTS:
     const runTests = false;
@@ -38,7 +38,7 @@ export const run = async () => {
             assert.strictEqual(balance, 230);
             completeTask(6);
         } catch (e) {
-            console.log(`\n${chalk.red(chalk.bold("Tests failed!"))}\n`)
+            console.log(`\n${chalk.red(chalk.bold("Tests failed!"))}\n`);
         }
     }
 };

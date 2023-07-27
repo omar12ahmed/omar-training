@@ -23,10 +23,10 @@ export const run = async () => {
     const car = {
         make: "Nissan",
         model: "Juke",
-        Year: 2018,
+        year: 2018,
         colour: "blue",
-        accelerator: function () {
-            return "vroom";
+        accelerate: function () {
+            return "Vroom!";
         }
     };
 

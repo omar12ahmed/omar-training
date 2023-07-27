@@ -3,9 +3,9 @@
         "id": 1,
         "title": "It works!",
         "description": "Print \"Hello World!\" to the console",
-        "completed": false,
+        "completed": true,
         "dateCreated": "2023-06-27",
-        "dateCompleted": null
+        "dateCompleted": "2023-07-27"
     },
     {
         "id": 2,
@@ -27,17 +27,17 @@
         "id": 4,
         "title": "8 Days a Week",
         "description": "Can you tell me if I should be working or not.",
-        "completed": false,
+        "completed": true,
         "dateCreated": "2023-06-28",
-        "dateCompleted": null
+        "dateCompleted": "2023-07-27"
     },
     {
         "id": 5,
         "title": "Car Go Vroom!",
         "description": "Create a car object with a make, model, year, and colour and an accelerator.",
-        "completed": false,
+        "completed": true,
         "dateCreated": "2023-06-28",
-        "dateCompleted": null
+        "dateCompleted": "2023-07-27"
     },
     {
         "id": 6,
