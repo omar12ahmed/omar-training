@@ -38,5 +38,13 @@
         "completed": false,
         "dateCreated": "2023-06-28",
         "dateCompleted": null
+    },
+    {
+        "id": 6,
+        "title": "Lesson 1 Ecercises (Javascript Basics)",
+        "description": "JavaScript Full Course (2023) - Beginner to Pro - Part 1 exercises.",
+        "completed": false,
+        "dateCreated": "2023-07-21",
+        "dateCompleted": null
     }
 ]
