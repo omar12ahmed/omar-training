@@ -1,12 +1,14 @@
 const container = document.getElementById("listContainer");
-let taskInput = document.getElementById("task-text");
+const titleInput = document.getElementById("taskTitle");
+let subtitleInput = document.getElementById("SubtitleInput");
+
 const addTaskButton = document.getElementById("add-task");
 const DeleteInput = document.getElementById("delete-text");
 const taskDelete = document.getElementById("delete-button");
 const toDo = document.getElementById("To-do");
 const inProgress = document.getElementById("In-progress");
 const completed = document.getElementById("Completed");
-const taskItems = document.getElementsByClassName("card");
+// const taskItems = document.getElementsByClassName("card");
 
 // create the shape of the task
 // create an array of dummy tasks
@@ -17,36 +19,90 @@ taskItems = [
         title: "Work",
         subtitle: "Create a Task Manager App",
         text: "Create a task management App using HTML, CSS and Javascript",
-        Status: "In-progress"
+        status: "In-progress"
     },
     {
         id: 1,
         title: "Goal cards",
         subtitle: "Gym",
         text: "Establish a regular exercise routine and maintain a healthy lifestyle",
-        Status: "To-do"
+        status: "To-do"
     },
     {
         id: 2,
         title: "Goal cards",
         subtitle: "Travel",
         text: "Travel to Australia before the end of 2023 and maybe travel to a new country twice in 2024",
-        Status: "To-do"
+        status: "To-do"
     },
     {
         id: 3,
         title: "Work",
         subtitle: "Work-life",
         text: "Develop and maintain a healthy work-life balance",
-        Status: "In-progress"
+        status: "In-progress"
     }
 ];
 
+// create a function to add a task to the array
+
+/*function form(e) {
+    if (e.preventDefault) e.preventDefault();
+    return false;
+
+    if (form.attachEvent) {
+        form.attachEvent("submit");
+    } else {
+        form.addEventListener("submit");
+    }
+}*/
+
+function processForm(e) {
+    if (e.preventDefault) e.preventDefault();
+
+    // getting title
+    // getting subtitle
+    // getting text
+
+    console.log(e);
+
+    let form = document.getElementById("my-form");
+    const addTaskButton = document.getElementById("add-task");
+    const formData = new FormData(form, addTaskButton);
+
+    // create a task
+    const task = {
+        id: taskItems.length,
+        title: formData.get("title"),
+        subtitle: formData.get("subtitle"),
+        text: formData.get("text"),
+        status: "To-do"
+    };
+
+    // add task to taskItems
+    taskItems.push(task);
+
+    // rerender
+    render();
+}
+
+// delete
+
+let form = document.getElementById("my-form");
+if (form.attachEvent) {
+    form.attachEvent("submit", processForm);
+} else {
+    form.addEventListener("submit", processForm);
+}
 function render() {
+    document.getElementById("To-do").innerHTML = "";
+    document.getElementById("In-progress").innerHTML = "";
+    document.getElementById("Completed").innerHTML = "";
+
     taskItems.forEach((task) => {
-        const html = `<div class="card"> id: ${task.id}, title: ${task.title}, subtitle: ${task.subtitle}, text: ${task.text}, status: ${task.Status} </div>`;
+        const html = `<div class="card"> id: ${task.id}, title: ${task.title}, subtitle: ${task.subtitle}, text: ${task.text}, status: ${task.status} </div>`;
         const card = document.createRange().createContextualFragment(html);
-        if (task.Status === "To-do") {
+        if (task.status === "To-do") {
             toDo.appendChild(card);
         } else if (task.status === "In-progress") {
             inProgress.appendChild(card);

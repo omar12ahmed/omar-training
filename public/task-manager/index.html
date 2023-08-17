@@ -14,109 +14,240 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        </section>
         <div class="container text-center">
-          <div class="header ">
-            <div class="row m-3">
-              <div class="col">
-                <h1>Task Manager</h1>
-              </div>
+            <div class="header">
+                <div class="row m-3">
+                    <div class="col">
+                        <h1>Task Manager</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col d-flex justify-content-end">
+                        <button
+                            class="btn btn-primary mb-2"
+                            role="toolbar"
+                            aria-label="toolbar"
+                            type="button"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasExample"
+                            aria-controls="offcanvasExample"
+                        >
+                            Tasks
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel"
+                >
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                            Add Task
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div>
+                            <h5
+                                class="offcanvas-title d-flex flex-start"
+                                id="offcanvasExampleLabel"
+                            >
+                                Task
+                            </h5>
+                            <form id="my-form">
+                                <div class="input-group mb-3">
+                                    <div>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="titleInput"
+                                            name="title"
+                                            aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default"
+                                            placeholder="Title"
+                                        />
+                                    </div>
+                                    <div>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="SubtitleInput"
+                                            name="subtitle"
+                                            aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default"
+                                            placeholder="card-subtitle"
+                                        />
+                                    </div>
+                                    <div>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="textInput"
+                                            name="text"
+                                            aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default"
+                                            placeholder="card-text"
+                                        />
+                                    </div>
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-success"
+                                    id="add-task"
+                                >
+                                    Add
+                                </button>
+                            </form>
+                        </div>
+
+                        <div>
+                            <h5
+                                class="offcanvas-title d-flex flex-start"
+                                id="offcanvasExampleLabel"
+                            >
+                                Delete Task
+                            </h5>
+                            <div class="input-group mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="delet-text"
+                                    aria-label="Text input with dropdown button"
+                                />
+                                <button
+                                    class="btn btn-outline-secondary dropdown-toggle"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Dropdown
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Create a task management App using
+                                            HTML, CSS and Javascript</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Establish a regular exercise
+                                            routine and maintain a healthy
+                                            lifestyle</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Travel to Australia before the end
+                                            of 2023 and maybe travel to a new
+                                            country twice in 2024
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >Develop and maintain a healthy
+                                            work-life balance</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <button
+                                type="button"
+                                class="btn btn-danger"
+                                id="delete-button"
+                            >
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="row">
-              <div class="col d-flex justify-content-end" >
-              <button class="btn btn-primary mb-2 " role="toolbar" aria-label="toolbar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-              Tasks
-            </button>
+            <div class="row p-3">
+                <div class="col task-container border rounded bg-danger drop">
+                    To-do
+                </div>
+                <div class="col task-container border rounded mx-3 bg-warning">
+                    In Progress
+                </div>
+                <div class="col task-container border rounded bg-success">
+                    Completed
+                </div>
             </div>
-          </div>
-            
-
-
-            
-            
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Add Task</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <div>
-                  <h5 class="offcanvas-title d-flex flex-start" id="offcanvasExampleLabel">Task</h5>
-                  <form onsubmit="form()">
-                  <div class="input-group mb-3 ">
-                    <div><input type="text" class="form-control" id="task-text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Title"></div>
-                   <div><input type="text" class="form-control" id="task-text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="card-subtitle"></div>
-                   <div><input type="text" class="form-control" id="task-text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="card-text"></div>
-
-                  </div>
-                  
-                  <button type="button" class="btn btn-success" id="add-task">Add</button>
-                  </form>
+            <div class="row p-3">
+                <div class="col border rounded" id="To-do">
+                    <div
+                        class="card m-4 draggable-element"
+                        style="width: 18rem"
+                    >
+                        <div class="card-body">
+                            <h5 class="card-title">Work</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">
+                                Create a Task Manager App
+                            </h6>
+                            <p class="card-text">
+                                Create a task management App using HTML, CSS and
+                                Javascript
+                            </p>
+                            <a href="#" class="card-link">A link to my Code</a>
+                        </div>
+                    </div>
+                    <div
+                        class="card draggable-element m-4"
+                        style="width: 18rem"
+                    >
+                        <div class="card-body">
+                            <h5 class="card-title">Goal cards</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">
+                                Gym
+                            </h6>
+                            <p class="card-text">
+                                Establish a regular exercise routine and
+                                maintain a healthy lifestyle
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="card draggable-element m-4"
+                        style="width: 18rem"
+                    >
+                        <div class="card-body">
+                            <h5 class="card-title">Goal cards</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">
+                                Travel
+                            </h6>
+                            <p class="card-text">
+                                Travel to Australia before the end of 2023 and
+                                maybe travel to a new country twice in 2024
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="card draggable-element m-4"
+                        style="width: 18rem"
+                    >
+                        <div class="card-body">
+                            <h5 class="card-title">Work</h5>
+                            <p class="card-text">
+                                Develop and maintain a healthy work-life balance
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-                <div>
-                  <h5 class="offcanvas-title d-flex flex-start" id="offcanvasExampleLabel"> Delete Task</h5>
-                  <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="delet-text" aria-label="Text input with dropdown button">
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                      <li><a class="dropdown-item" href="#">Create a task management App using HTML, CSS and Javascript</a></li>
-                      <li><a class="dropdown-item" href="#">Establish a regular exercise routine and maintain a healthy lifestyle</a></li>
-                      <li><a class="dropdown-item" href="#">Travel to Australia before the end of 2023 and maybe travel to a new country twice in 2024 </a></li>
-                     
-                      <li><a class="dropdown-item" href="#">Develop and maintain a healthy work-life balance</a></li>
-                    </ul>
-                  </div>
-                  <button type="button" class="btn btn-danger" id="delete-button">Delete</button>
-
-                </div>
-                
-              </div>
-            </div>            
-
-
-          </div>
-
-          <div class="row p-3  ">
-            <div class="col task-container border rounded bg-danger drop">To-do</div>
-            <div class="col task-container border rounded mx-3 bg-warning">In Progress</div>
-            <div class="col task-container border rounded bg-success">Completed</div>
-          </div>
-          <div class="row p-3">
-            <div class="col border rounded" id="To-do">
-            
-              <div class="card m-4 draggable-element" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Work</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">Create a Task Manager App</h6>
-                  <p class="card-text">Create a task management App using HTML, CSS and Javascript </p>
-                  <a href="#" class="card-link">A link to my Code</a>
-                </div>
-              </div><div class="card draggable-element m-4" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Goal cards</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">Gym</h6>
-                  <p class="card-text"> Establish a regular exercise routine and maintain a healthy lifestyle</p>
-                </div>
-              </div><div class="card draggable-element m-4" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Goal cards</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">Travel</h6>
-                  <p class="card-text">Travel to Australia before the end of 2023 and maybe travel to a new country twice in 2024 </p>
-                  
-                </div>
-              </div><div class="card draggable-element m-4" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Work</h5>
-                  <p class="card-text">Develop and maintain a healthy work-life balance</p>
-                  
-                </div>
-              </div>
+                <div class="col mx-3 border rounded" id="In-progress"></div>
+                <div class="col border rounded" id="Completed"></div>
             </div>
-            <div class="col mx-3 border rounded" id="In-progress"></div>
-            <div class="col border rounded" id="Completed"></div>
-          </div>
         </div>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
